@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 });
 
 // Game greeting
-// also redirect
+// along with game start
 function gameStart(){
     const game = document.getElementById('game');
     let greeting = document.createElement('h1');
@@ -14,7 +14,16 @@ function gameStart(){
     start.innerText = "Click Me";
     start.addEventListener("click", ()=>{
         clearText();
-        // startCharacterCreation();
+        startCharacterCreation();
     });
     game.appendChild(start);
+}
+
+function startCharacterCreation(){
+    const characterForm = document.createElement('form');
+    const nameInput = document.createElement('textarea');
+    const submit = document.createElement('submit');
+    characterForm.appendChild(nameInput);
+    characterForm.appendChild(submit);
+    game.appendChild(characterForm);
 }
