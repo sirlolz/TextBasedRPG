@@ -4,9 +4,12 @@ class Character {
     // characters need a name
     constructor(name){
         this.name = name;
+        this.strength = 10;
+        this.agility = 10;
+        this.endurance = 10;
     }
 
-    read(){
-        console.log(this.name);
+    stats(){
+        console.log(this);
     }
 }

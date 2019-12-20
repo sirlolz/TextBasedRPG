@@ -13,14 +13,8 @@ function gameStart(){
     let start = document.createElement('button');
     start.innerText = "Click Me";
     start.addEventListener("click", ()=>{
-        startCharacterCreation()
+        clearText();
+        // startCharacterCreation();
     });
     game.appendChild(start);
-}
-
-//character creation setup
-// uses character Class
-function startCharacterCreation(){
-    let j = new Character('Jareluped');
-    j.read()
 }
