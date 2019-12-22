@@ -7,9 +7,15 @@ class Character {
         this.strength = 10;
         this.agility = 10;
         this.endurance = 10;
+        this.stats = {
+            name:this.name,
+            strength:this.strength,
+            agility:this.agility,
+            endurance:this.endurance
+        };
     }
 
-    stats(){
-        console.log(this);
+    stat = () => {
+        return this.stats;
     }
 }

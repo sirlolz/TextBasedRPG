@@ -19,11 +19,10 @@ function gameStart(){
     game.appendChild(start);
 }
 
-function startCharacterCreation(){
-    const characterForm = document.createElement('form');
-    const nameInput = document.createElement('textarea');
-    const submit = document.createElement('submit');
-    characterForm.appendChild(nameInput);
-    characterForm.appendChild(submit);
-    game.appendChild(characterForm);
+//start of player journey
+// player character has been created
+// file charactercreation
+function playerStart(){
+    clearText();
+    console.log(player);
 }
