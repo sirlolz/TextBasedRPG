@@ -3,14 +3,15 @@ window.addEventListener("DOMContentLoaded", ()=>{
     gameStart();
 });
 
+let greeting = document.createElement('h1');
+
 // Game greeting
 // along with game start
 function gameStart(){
     const game = document.getElementById('game');
-    let greeting = document.createElement('h1');
     greeting.innerText = "Welcome to my (Jared Burnham) first ever textbased RPG click here to get started"
     game.appendChild(greeting);
-    let start = document.createElement('button');
+    const start = document.createElement('button');
     start.innerText = "Click Me";
     start.addEventListener("click", ()=>{
         clearText();
@@ -24,5 +25,10 @@ function gameStart(){
 // file charactercreation
 function playerStart(){
     clearText();
-    console.log(player);
+    greeting.innerText = "welcome " + player.name;
+    game.appendChild(greeting);
+    const link  = document.createElement('a');
+    link.innerText = "enter map";
+    link.setAttribute('href', './map.html');
+    game.appendChild(link);
 }

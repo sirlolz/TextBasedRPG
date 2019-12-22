@@ -22,6 +22,7 @@ function handleCreation(node){
     node.addEventListener('submit',(event)=>{
         event.preventDefault();
         player = new Character(event.target.userName.value);
+        localStorage.setItem('player', player);
         playerStart();
     });
 }
