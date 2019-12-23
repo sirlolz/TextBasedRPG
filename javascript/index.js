@@ -25,10 +25,6 @@ function gameStart(){
 // file charactercreation
 function playerStart(){
     clearText();
-    greeting.innerText = "welcome " + player.name;
+    greeting.innerText = "welcome " + player.name + ' to the land of ?insertlandnamehere¿';
     game.appendChild(greeting);
-    const link  = document.createElement('a');
-    link.innerText = "enter map";
-    link.setAttribute('href', './map.html');
-    game.appendChild(link);
 }

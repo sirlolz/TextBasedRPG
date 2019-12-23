@@ -7,7 +7,11 @@ class Character {
         this.strength = 10;
         this.agility = 10;
         this.endurance = 10;
-        this.stats = {
+    }
+
+    //collection of all stats
+    stats = () => {
+        return {
             name:this.name,
             strength:this.strength,
             agility:this.agility,
@@ -15,7 +19,13 @@ class Character {
         };
     }
 
-    stat = () => {
-        return this.stats;
+    //takes a stat as a string then adds the value to it
+    statChange = (stat, value) => {
+        if(stat === 'name'){
+            return this.name = value;
+        }else{
+            return this[`${stat}`] += value;
+        }
     }
+    
 }
