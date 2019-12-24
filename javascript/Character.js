@@ -13,7 +13,7 @@ class Character {
         this.energy = this.agility * 10;
     }
 
-    //collection of all stats
+    //returns stats as a string
     stats = () => {
         return {
             name:this.name,
@@ -36,18 +36,28 @@ class Character {
 
     // used for levelup and level setting for npc/cheating lol hahahaha 
     // if your reading htis and cheat shame on you
-    levelUp(player, level = 1){
+    levelUp(level = 1){
         const stats = allStats();
         for(let i = 0; i < stats.length; i++){
             if(stats[i] === 'health' || stats[i] === 'energy'){
-                player.statChange(stats[i], (level * 10));
+                this.statChange(stats[i], (level * 10));
             }else{
-                player.statChange(stats[i], level);
+                this.statChange(stats[i], level);
             }
         }
+        return player.stats();
     }
 }
 
 function allStats(){
-    return ["strength", 'agility','endurance','health','energy'];
+    return ["name", "strength", 'agility','endurance','health','energy'];
+}
+
+function cleanStatDisplay(player){
+    allStats().forEach(element => {
+         let p = document.createElement('p');
+         p.innerText = `${element}:` + player[`${element}`];
+         game.appendChild(p);
+    });
+    return true;
 }
