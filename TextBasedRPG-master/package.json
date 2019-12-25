@@ -1,0 +1,25 @@
+{
+  "name": "browserrpg",
+  "version": "1.0.0",
+  "description": "browser based rpg starting as text based then adding graphics after i get the sotry down",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirlolz/TextBasedRPG.git"
+  },
+  "keywords": [
+    "Role",
+    "Playing",
+    "Game",
+    "RPG"
+  ],
+  "author": "Jared Burnham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirlolz/TextBasedRPG/issues"
+  },
+  "homepage": "https://github.com/sirlolz/TextBasedRPG#readme"
+}
