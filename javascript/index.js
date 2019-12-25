@@ -25,7 +25,7 @@ function gameStart(){
 // file charactercreation
 function playerStart(){
     clearText();
-    greeting.innerText = "welcome to the land of ?insertlandnamehere¿";
+    greeting.innerText = "welcome to The Land of Mysterie";
     game.appendChild(greeting);
     cleanStatDisplay(player);
 }
